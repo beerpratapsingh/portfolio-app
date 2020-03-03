@@ -1,0 +1,51 @@
+@import mixing
+@import variable
+
+img
+  max-width: 100%
+
+a
+  color: $blue
+  text-decoration: none
+
+p
+  font-size: 16px
+  line-height: 1.8em
+
+ul,
+ol
+  list-style: none
+
+%color-shared
+  color: $primary-color
+  letter-spacing: 1px
+
+h1
+  @extend %color-shared
+  font-size: 48px
+h2
+  @extend %color-shared
+  font-size: 42px
+h3
+  @extend %color-shared
+  font-size: 36px
+h4
+  @extend %color-shared
+  font-size: 24px
+
+.btn
+  display: inline-block
+  padding: 7px 20px 10px
+  @include border-radius(5px)
+
+.text-center
+  text-align: center
+
+@media only screen and (max-width: 47.9375em)
+  h1
+    font-size: 48px
+  .page-content
+    z-index: 1
+  .page-icon
+    position: absolute
+    opacity: .5

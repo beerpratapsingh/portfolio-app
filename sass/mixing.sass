@@ -1,0 +1,21 @@
+@mixin border-radius($radius)
+  -webkit-border-radius : $radius
+  -ms-border-radius : $radius
+  border-radius : $radius
+
+@mixin transform($property)
+  -webkit-transform: $property
+  -ms-transform: $property
+  transform: $property
+
+@mixin border($direction,$size, $type, $color)
+  @if($direction == "none")
+    border: $size + px $type $color
+  @if($direction == "top")
+    border-top: $size + px $type $color
+  @if($direction == "left")
+    border-left: $size + px $type $color
+  @if($direction == "right")
+    border-right: $size + px $type $color
+  @if($direction == "bottom")
+    border-bottom: $size + px $type $color

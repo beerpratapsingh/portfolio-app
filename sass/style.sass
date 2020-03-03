@@ -1,0 +1,182 @@
+@import reset
+@import common
+@import variable
+
+@font-face
+  src: url(../fonts/Archivo-Regular.ttf)
+  font-family: Archivo-Regular
+
+html
+  scroll-behavior: smooth
+
+body
+  color: $primary-color
+  font-family: $font-stack
+  font-size: 15px
+  line-height: 1.24  
+
+  %css-shared
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+
+  .page-wrap
+    max-width: 1170px
+    margin: 0 auto
+    .page-aside
+      padding-top: 3em
+      padding-bottom: 40px
+      float: left
+      width: 300px
+      height: 90vh
+      position: fixed
+      overflow-y: scroll
+      z-index: 1001
+      background: #f2f3f7
+      -webkit-transition: .5s
+      -o-transition: .5s
+      transition: .5s
+      .aside-profile
+        .auther-img
+          max-width: 200px
+          margin: 0 auto 2em          
+          img
+            border-radius: 50%
+        .auther-position
+          display: block
+          margin:1em 0 3em
+          font-size: 12px
+          text-transform: uppercase      
+      .aside-menu
+        ul          
+          li
+            margin: 0 0 15px
+            padding: 0
+            list-style: none
+            font-size: 14px
+            font-weight: 500
+            text-transform: uppercase
+            letter-spacing: 1px
+            a
+              color: rgba(0, 0, 0, .7)
+              text-decoration: none
+              position: relative
+              padding: 10px 0
+              font-family: quicksand, Arial, sans-serif
+              -webkit-transition: .3s
+              -o-transition: .3s
+              transition: .3s
+              &:hover
+                color: $blue
+                &:after
+                  visibility: visible
+                  -webkit-transform: scaleX(1)
+                  -moz-transform: scaleX(1)
+                  -ms-transform: scaleX(1)
+                  -o-transform: scaleX(1)
+                  transform: scaleX(1)
+              &:after
+                content: ""
+                position: absolute
+                height: 1px
+                bottom: 7px
+                left: 0
+                right: 0
+                background-color: #0081cb
+                visibility: hidden
+                -webkit-transform: scaleX(0)
+                -moz-transform: scaleX(0)
+                -ms-transform: scaleX(0)
+                -o-transform: scaleX(0)
+                transform: scaleX(0)
+                -webkit-transition: all .3s cubic-bezier(.175, .885, .32, 1.275)
+                -moz-transition: all .3s cubic-bezier(.175, .885, .32, 1.275)
+                -ms-transition: all .3s cubic-bezier(.175, .885, .32, 1.275)
+                -o-transition: all .3s cubic-bezier(.175, .885, .32, 1.275)
+                transition: all .3s cubic-bezier(.175, .885, .32, 1.275)
+
+    .page-main
+      width: calc(100% - 300px)   
+      float: right
+      -webkit-transition: .5s
+      -o-transition: .5s
+      transition: .5s
+      section
+        height: 100vh                      
+      .page-hero
+        width: 100%
+        height: 100vh
+        background: url(../images/img_bg_1.webp) fixed center top no-repeat
+        .info 
+          h1            
+            margin-bottom: 1em      
+          a
+            color: $primary-color
+            text-transform: uppercase
+            letter-spacing: 2px
+            border: 1px solid $primary-color
+            padding: 10px 20px        
+            &:hover
+              color: $white
+              background: $blue
+              border: 1px solid $blue        
+      .inner-content
+          padding: 4em 2.5em 0 2.5em
+          .page-title
+            font-size: 24px
+            margin-bottom: 1em
+            .first-word
+              color: $blue
+
+
+  // .home-bg
+  //   background: rgba(0,0,0,.9) url(../images/rectangle@2x.png) no-repeat
+  //   .wrap
+  //     max-width: 1200px
+  //     margin: 0 auto      
+  //     .header      
+  //       padding: 25px 0
+  //       .logo
+  //         max-width: 100px
+  //         display: inline-block
+  //         padding: 0
+  //         a
+  //           display: inherit   
+  //       .nav-bar
+  //         .navbar-list
+  //           li
+  //             margin-right: 20px
+  //         .btn
+  //           color: $white
+  //           background: $light-brown  
+  //         .hamburger-icon
+  //           cursor: pointer
+  //           span
+  //             width: 35px
+  //             height: 5px
+  //             display: block
+  //             background: #818181
+  //             position: relative
+  //             transition: all .5s              
+  //             & + span
+  //               margin-top: 5px
+  //         .open
+  //           margin-top: -10px
+  //           span
+  //             &:nth-child(1)
+  //               top: 10px
+  //               @include transform(rotate(45deg))
+  //             &:nth-child(2)                
+  //               @include transform(rotate(-45deg))
+      
+    
+  //       padding: 20px 0
+  //       .social-icons
+  //         .icons-list
+  //           display: flex
+  //           li
+  //             & + li
+  //               margin-left: 15px
+  //             a
+  //               color: $white
+  //               font-size: 20px                        
