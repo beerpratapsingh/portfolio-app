@@ -12,8 +12,9 @@ html
 body
   color: $primary-color
   font-family: $font-stack
-  font-size: 15px
-  line-height: 1.24  
+  font-size: 16px
+  line-height: 1.24
+  letter-spacing: .7px
 
   %css-shared
     display: flex
@@ -24,11 +25,11 @@ body
     max-width: 1170px
     margin: 0 auto
     .page-aside
-      padding-top: 3em
+      padding-top: 3rem
       padding-bottom: 40px
       float: left
       width: 300px
-      height: 90vh
+      height: 100vh
       position: fixed
       overflow-y: scroll
       z-index: 1001
@@ -39,12 +40,12 @@ body
       .aside-profile
         .auther-img
           max-width: 200px
-          margin: 0 auto 2em          
-          img
-            border-radius: 50%
+          margin: 0 auto 2rem          
+          img            
+            @include border-radius(50%)
         .auther-position
           display: block
-          margin:1em 0 3em
+          margin:1rem 0 3rem
           font-size: 12px
           text-transform: uppercase      
       .aside-menu
@@ -55,8 +56,7 @@ body
             list-style: none
             font-size: 14px
             font-weight: 500
-            text-transform: uppercase
-            letter-spacing: 1px
+            text-transform: uppercase            
             a
               color: rgba(0, 0, 0, .7)
               text-decoration: none
@@ -98,6 +98,7 @@ body
     .page-main
       width: calc(100% - 300px)   
       float: right
+      margin-left: 300px
       -webkit-transition: .5s
       -o-transition: .5s
       transition: .5s
@@ -109,11 +110,10 @@ body
         background: url(../images/img_bg_1.webp) fixed center top no-repeat
         .info 
           h1            
-            margin-bottom: 1em      
+            margin-bottom: 1rem      
           a
             color: $primary-color
-            text-transform: uppercase
-            letter-spacing: 2px
+            text-transform: uppercase            
             border: 1px solid $primary-color
             padding: 10px 20px        
             &:hover
@@ -121,62 +121,80 @@ body
               background: $blue
               border: 1px solid $blue        
       .inner-content
-          padding: 4em 2.5em 0 2.5em
-          .page-title
-            font-size: 24px
-            margin-bottom: 1em
-            .first-word
-              color: $blue
+        width: 100%
+        padding: 4rem 2.5rem 0 2.5rem
+        .row + .row
+          margin-top: 1rem
+        .page-title
+          font-size: 24px
+          margin-bottom: 2rem
+          padding-bottom: 1rem
+          position: relative
+          .first-word
+            color: $orange
+          &:after
+            content: ''
+            position: absolute
+            left: 0
+            right: 0
+            bottom: 0
+            height: 1px
+            background: -moz-radial-gradient(left,ellipse cover,$orange 0%,rgba(255,255,255,0) 70%)
+            background: -webkit-radial-gradient(left,ellipse cover,$orange 0%,rgba(255,255,255,0) 70%)
+            background: radial-gradient(ellipse at left,$orange 0%,rgba(255,255,255,0) 70%)          
+        .info-list
+          ul
+            li
+              padding: 0 0 5px
+              display: inline-block
+              vertical-align: top
+              width: 49%
+              text-align: left
+        .service-item
+            margin-bottom: 30px
+            padding: 1.5em
+            -webkit-box-shadow: 0 0 56px -8px rgba(0,0,0,.17)
+            -moz-box-shadow: 0 0 56px -8px rgba(0,0,0,.17)
+            -ms-box-shadow: 0 0 56px -8px rgba(0,0,0,.17)
+            -o-box-shadow: 0 0 56px -8px rgba(0,0,0,.17)
+            box-shadow: 0 0 56px -8px rgba(0,0,0,.17)
+            border-bottom: 2px solid #2c98f0
+            .icon
+              width: 60px
+              height: 60px
+              color: $orange
+              display: inline-block
+              @include border-radius(50%)
+              line-height: 60px
+              text-align: center
+              background: -moz-linear-gradient(-45deg,rgba(255,152,0,.15) 0%,rgba(255,152,0,.01) 100%)
+              background: -webkit-linear-gradient(-45deg,rgba(255,152,0,.15) 0%,rgba(255,152,0,.01) 100%)
+              background: linear-gradient(135deg,rgba(255,152,0,.15) 0%,rgba(255,152,0,.01) 100%)               
+            .service-name
+              margin: 10px 0 5px
 
-
-  // .home-bg
-  //   background: rgba(0,0,0,.9) url(../images/rectangle@2x.png) no-repeat
-  //   .wrap
-  //     max-width: 1200px
-  //     margin: 0 auto      
-  //     .header      
-  //       padding: 25px 0
-  //       .logo
-  //         max-width: 100px
-  //         display: inline-block
-  //         padding: 0
-  //         a
-  //           display: inherit   
-  //       .nav-bar
-  //         .navbar-list
-  //           li
-  //             margin-right: 20px
-  //         .btn
-  //           color: $white
-  //           background: $light-brown  
-  //         .hamburger-icon
-  //           cursor: pointer
-  //           span
-  //             width: 35px
-  //             height: 5px
-  //             display: block
-  //             background: #818181
-  //             position: relative
-  //             transition: all .5s              
-  //             & + span
-  //               margin-top: 5px
-  //         .open
-  //           margin-top: -10px
-  //           span
-  //             &:nth-child(1)
-  //               top: 10px
-  //               @include transform(rotate(45deg))
-  //             &:nth-child(2)                
-  //               @include transform(rotate(-45deg))
-      
-    
-  //       padding: 20px 0
-  //       .social-icons
-  //         .icons-list
-  //           display: flex
-  //           li
-  //             & + li
-  //               margin-left: 15px
-  //             a
-  //               color: $white
-  //               font-size: 20px                        
+@media only screen and (max-width: 47.9375em)
+  h1
+    font-size: 48px
+  .page-aside
+    position: relative !important  
+    .aside-menu
+      position: fixed !important
+      bottom: 0
+      background: #fff
+      width: 100%
+      left: 0
+      box-shadow: 0px 1px 7px #000 
+      padding: 20px 0px 5px
+      ul
+        display: flex
+        justify-content: space-around 
+    .aside-footer
+      display: none
+  .page-main
+    margin-left: 0 !important
+    section
+      height: auto !important
+      margin-bottom: 3rem
+      .inner-content
+        padding: 0 !important

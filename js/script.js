@@ -17,3 +17,13 @@ window.addEventListener("scroll", event => {
     }
   });
 });
+
+
+$(document).ready( () => {
+  $('#submitBtn').on('click', (e) => {
+    e.preventDefault();
+    console.log('====================================');
+    console.log('Clicked');
+    console.log('====================================');
+  })
+})
