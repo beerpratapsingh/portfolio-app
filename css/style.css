@@ -62,6 +62,10 @@ textarea {
   border: 1px solid #f2f2f2;
 }
 
+.contact-details {
+  margin-bottom: 1rem;
+}
+
 .form-group {
   margin-bottom: 1rem;
 }
@@ -129,6 +133,34 @@ body {
   line-height: 1.24;
   letter-spacing: 0.7px;
 }
+body .page-wrap .page-aside .aside-menu ul li a.active:after, body .page-wrap .page-aside .aside-menu ul li a:hover:after {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  -moz-transform: scaleX(1);
+  -ms-transform: scaleX(1);
+  -o-transform: scaleX(1);
+  transform: scaleX(1);
+}
+body .page-wrap .page-aside .aside-menu ul li a:after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  bottom: 7px;
+  left: 0;
+  right: 0;
+  background-color: #0081cb;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  -moz-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  -o-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -moz-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -ms-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -o-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
 body .page-wrap {
   max-width: 1170px;
   margin: 0 auto;
@@ -183,33 +215,8 @@ body .page-wrap .page-aside .aside-menu ul li a {
 body .page-wrap .page-aside .aside-menu ul li a:hover {
   color: #0081cb;
 }
-body .page-wrap .page-aside .aside-menu ul li a:hover:after {
-  visibility: visible;
-  -webkit-transform: scaleX(1);
-  -moz-transform: scaleX(1);
-  -ms-transform: scaleX(1);
-  -o-transform: scaleX(1);
-  transform: scaleX(1);
-}
-body .page-wrap .page-aside .aside-menu ul li a:after {
-  content: "";
-  position: absolute;
-  height: 1px;
-  bottom: 7px;
-  left: 0;
-  right: 0;
-  background-color: #0081cb;
-  visibility: hidden;
-  -webkit-transform: scaleX(0);
-  -moz-transform: scaleX(0);
-  -ms-transform: scaleX(0);
-  -o-transform: scaleX(0);
-  transform: scaleX(0);
-  -webkit-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  -moz-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  -ms-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  -o-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+body .page-wrap .page-aside .aside-menu ul li a.active {
+  color: #0081cb;
 }
 body .page-wrap .page-main {
   width: calc(100% - 300px);
@@ -218,9 +225,6 @@ body .page-wrap .page-main {
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
-}
-body .page-wrap .page-main section {
-  height: 100vh;
 }
 body .page-wrap .page-main .page-hero {
   width: 100%;
@@ -244,9 +248,6 @@ body .page-wrap .page-main .page-hero .info a:hover {
 body .page-wrap .page-main .inner-content {
   width: 100%;
   padding: 4rem 2.5rem 0 2.5rem;
-}
-body .page-wrap .page-main .inner-content .row + .row {
-  margin-top: 1rem;
 }
 body .page-wrap .page-main .inner-content .page-title {
   font-size: 24px;
