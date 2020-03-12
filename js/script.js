@@ -9,8 +9,7 @@ $(document).ready( () => {
     });
   });
 
-  $(window).on('scroll', (ele) => {
-    console.log("ele", $(window).scrollTop());
+  $(window).on('scroll', () => {
     let windowScroll = $(window).scrollTop();
     if(windowScroll > 100){
       $('.aside-menu').addClass('fixed');
@@ -27,7 +26,7 @@ Http.open("POST", url);
 Http.send();
 
 Http.onreadystatechange = (e) => {
-  console.log(Http.responseText)
+  // console.log(Http.responseText)
 }
 
 $('#submitBtn').on('click', (e) => {
