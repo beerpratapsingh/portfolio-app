@@ -121,6 +121,7 @@ body
         height: 100vh
         background: url(../images/img_bg_1.webp) fixed center top no-repeat
         .info 
+          text-align: center
           h1            
             margin-bottom: 1rem      
           a
@@ -131,12 +132,13 @@ body
             &:hover
               color: $white
               background: $blue
-              border: 1px solid $blue        
+              border: 1px solid $blue
+          a+a
+            margin-top: 1rem      
       .inner-content
         width: 100%
         padding: 4rem 2.5rem 0 2.5rem
-        // .row + .row
-        //   margin-top: 1rem
+        
         .page-title
           font-size: 24px
           margin-bottom: 2rem
@@ -155,6 +157,7 @@ body
             background: -webkit-radial-gradient(left,ellipse cover,$orange 0%,rgba(255,255,255,0) 70%)
             background: radial-gradient(ellipse at left,$orange 0%,rgba(255,255,255,0) 70%)          
         .info-list
+          margin: 1rem 0 2rem
           ul
             li
               padding: 0 0 5px
@@ -185,28 +188,4 @@ body
             .service-name
               margin: 10px 0 5px
 
-@media only screen and (max-width: 47.9375em)
-  h1
-    font-size: 48px
-  .page-aside
-    position: relative !important  
-    .aside-menu
-      position: fixed !important
-      bottom: 0
-      background: #fff
-      width: 100%
-      left: 0
-      box-shadow: 0px 1px 7px #000
-      padding: 20px 0px 5px
-      ul
-        display: flex
-        justify-content: space-around 
-    .aside-footer
-      display: none
-  .page-main 
-    margin-left: 0 !important
-    section
-      height: auto !important
-      margin-bottom: 3rem
-      .inner-content
-        padding: 0 !important
+@import media
