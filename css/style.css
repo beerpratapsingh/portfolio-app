@@ -72,6 +72,9 @@ textarea {
 .form-group {
   margin-bottom: 1rem;
 }
+.form-group:last-child {
+  margin-bottom: 2rem;
+}
 
 h5, h4, h3, h2, h1 {
   color: #2a2a2a;
