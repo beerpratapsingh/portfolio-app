@@ -9,7 +9,7 @@ $(document).ready( () => {
     });
   });
 
-  $(window).on('scroll', () => {
+  $(window).on('scroll', (ele) => {
     let windowScroll = $(window).scrollTop();
     if(windowScroll > 100){
       $('.aside-menu').addClass('fixed');
@@ -20,15 +20,15 @@ $(document).ready( () => {
 });
 
 
-const Http = new XMLHttpRequest();
-const url = 'https://formspree.io/biru.harshi@gmail.com';
-Http.open("POST", url);
-Http.send();
+// const Http = new XMLHttpRequest();
+// const url = 'https://formspree.io/biru.harshi@gmail.com';
+// Http.open("POST", url);
+// Http.send();
 
-Http.onreadystatechange = (e) => {
-  // console.log(Http.responseText)
-}
+// Http.onreadystatechange = (e) => {
+//   console.log(Http.responseText)
+// }
 
-$('#submitBtn').on('click', (e) => {
-  // e.preventDefault();
-})
+// $('#submitBtn').on('click', (e) => {
+//   // e.preventDefault();
+// })
