@@ -8,6 +8,16 @@ $(document).ready( () => {
       scrollTop: $(section).offset().top
     });
   });
+
+  $(window).on('scroll', (ele) => {
+    console.log("ele", $(window).scrollTop());
+    let windowScroll = $(window).scrollTop();
+    if(windowScroll > 100){
+      $('.aside-menu').addClass('fixed');
+    } else{
+      $('.aside-menu').removeClass('fixed');
+    }
+  })
 });
 
 

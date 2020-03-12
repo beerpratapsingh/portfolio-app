@@ -324,6 +324,7 @@ body .page-wrap .page-main .inner-content .service-item .service-name {
     position: relative;
   }
   body .page-wrap .page-aside .aside-menu {
+    display: none;
     position: fixed;
     bottom: 0;
     background: #fff;
@@ -335,6 +336,9 @@ body .page-wrap .page-main .inner-content .service-item .service-name {
   body .page-wrap .page-aside .aside-menu ul {
     display: flex;
     justify-content: space-around;
+  }
+  body .page-wrap .page-aside .aside-menu.fixed {
+    display: block;
   }
   body .page-wrap .page-aside .aside-footer {
     display: none;

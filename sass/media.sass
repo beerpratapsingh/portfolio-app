@@ -7,6 +7,7 @@
       .page-aside
         position: relative  
         .aside-menu
+          display: none
           position: fixed
           bottom: 0
           background: #fff
@@ -17,6 +18,8 @@
           ul
             display: flex
             justify-content: space-around 
+          &.fixed
+            display: block
         .aside-footer
           display: none
       .page-main 

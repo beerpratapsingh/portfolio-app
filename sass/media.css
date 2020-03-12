@@ -6,6 +6,7 @@
     position: relative;
   }
   body .page-wrap .page-aside .aside-menu {
+    display: none;
     position: fixed;
     bottom: 0;
     background: #fff;
@@ -21,6 +22,9 @@
     display: flex;
     -ms-flex-pack: distribute;
         justify-content: space-around;
+  }
+  body .page-wrap .page-aside .aside-menu.fixed {
+    display: block;
   }
   body .page-wrap .page-aside .aside-footer {
     display: none;
