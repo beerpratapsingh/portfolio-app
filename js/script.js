@@ -11,6 +11,7 @@ $(document).ready( () => {
 
   let wHeight = $(window).innerHeight() / 2;
   $(window).on('scroll', (ele) => {
+    onScroll();
     let windowScroll = $(window).scrollTop();     
     if (windowScroll >= wHeight) {
       $('.aside-menu').addClass('fixed');
@@ -19,6 +20,22 @@ $(document).ready( () => {
     }
   })
 });
+
+
+function onScroll(event) {
+  var scrollPos = $(document).scrollTop();
+  $('.aside-menu ul li a').each(function () {
+    var currLink = $(this);
+    var refElement = $(currLink.attr("href"));
+    if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+      $('.aside-menu ul li a').removeClass("active"); //added to remove active class from all a elements
+      currLink.addClass("active");
+    } else {
+      currLink.removeClass("active");
+      // $('.nav-bar a').removeClass('active');
+    }
+  });
+}
 
 
 // const Http = new XMLHttpRequest();

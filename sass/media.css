@@ -34,13 +34,19 @@
     margin-left: 0;
     padding: 0;
   }
-  body .page-wrap .page-main section .inner-content {
+  body .page-wrap .page-main .flex {
+    padding-top: 2rem;
+  }
+  body .page-wrap .page-main .flex:last-child {
+    padding-bottom: 3rem;
+  }
+  body .page-wrap .page-main .flex .inner-content {
     padding: 0;
   }
-  body .page-wrap .page-main section .inner-content .info-list {
+  body .page-wrap .page-main .flex .inner-content .info-list {
     margin: 1rem 0 2rem;
   }
-  body .page-wrap .page-main section .inner-content .info-list ul li {
+  body .page-wrap .page-main .flex .inner-content .info-list ul li {
     width: auto;
     display: block;
   }
