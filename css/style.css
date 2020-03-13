@@ -26,6 +26,10 @@ ol {
   list-style: none;
 }
 
+.flex {
+  display: flex;
+}
+
 .icon {
   width: 60px;
   height: 60px;
@@ -325,6 +329,7 @@ body .page-wrap .page-main .inner-content .service-item .service-name {
   }
   body .page-wrap .page-aside {
     position: relative;
+    padding-top: 50%;
   }
   body .page-wrap .page-aside .aside-menu {
     display: none;
@@ -349,10 +354,6 @@ body .page-wrap .page-main .inner-content .service-item .service-name {
   body .page-wrap .page-main {
     margin-left: 0;
     padding: 0;
-  }
-  body .page-wrap .page-main section {
-    margin-bottom: 3rem;
-    margin-left: 0;
   }
   body .page-wrap .page-main section .inner-content {
     padding: 0;
